@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# To-Do App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cette application vous permet de créer des listes de tâches à effectuer et de les marquer comme terminées lorsque vous les avez terminées. Les données sont stockées sur Firebase, ce qui vous permet de accéder à vos listes depuis n'importe quel appareil.
 
-## Available Scripts
+<img src="./src/img/capture-todo.PNG">
 
-In the project directory, you can run:
+## Technologies utilisées
 
-### `npm start`
+    React: pour construire l'interface utilisateur
+    Firebase: pour stocker les données
+    Material-UI: pour la mise en page et les styles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fonctionnalités CRUD
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+L'application utilise Firebase pour stocker les données des tâches, qui sont organisées en listes. Pour chaque liste, il est possible de créer, lire, mettre à jour et supprimer des tâches.
 
-### `npm test`
+CREATE
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pour créer une tâche, il suffit de saisir le nom de la tâche dans le champ de saisie en haut de la page et de cliquer sur "Ajouter". La tâche sera ajoutée à la liste en cours d'affichage et sera automatiquement stockée sur Firebase.
 
-### `npm run build`
+READ
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Toutes les tâches d'une liste sont affichées sur la page d'accueil de l'application. Les tâches terminées sont affichées en grisées et les tâches en cours d'exécution sont affichées en noir.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+UPDATE
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pour marquer une tâche comme terminée, il suffit de cliquer sur la case à cocher à gauche du nom de la tâche. Cela mettra à jour l'état de la tâche sur Firebase.
 
-### `npm run eject`
+DELETE
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pour supprimer une tâche, il suffit de cliquer sur le bouton "Supprimer" à droite du nom de la tâche. Cela supprimera la tâche de la liste en cours d'affichage et de Firebase.
