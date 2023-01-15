@@ -33,7 +33,7 @@ export default function AddToDo() {
                 />
             </div>
             <div>
-                <button>
+                <button className="btn_container">
                     Add new task
                 </button>
             </div>

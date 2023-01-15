@@ -1,12 +1,14 @@
+/*
+Todo is a React component that takes as input a "todo" object with the task information, 
+as well as functions to manage the possible actions on this task
+*/
+
 import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-/*
-Todo is a React component that takes as input a "todo" object with the task information, 
-as well as functions to manage the possible actions on this task
-*/
+
 export default function Todo({ todo, toggleComplete, handleDelete, handleEdit, }) {
     // Using React's local state to handle the modified title of a task being edited
     const [newTitle, setNewTitle] = React.useState(todo.title);
@@ -25,6 +27,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit, }
     return (
         <div className="todo">
             <input
+                // Allows to cross out the text of the task if it is marked as completed
                 style={{ textDecoration: todo.completed && "line-through" }}
                 type="text"
                 value={todo.title === "" ? newTitle : todo.title}
